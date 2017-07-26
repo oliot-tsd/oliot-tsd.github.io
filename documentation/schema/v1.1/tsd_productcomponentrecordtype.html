@@ -1,0 +1,150 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for schema item TSD_ProductComponentRecordType in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'tsd_productcomponentrecordtype');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>TSD_ProductComponentRecordType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="urn_gs1_tsd_product_data_xsd_1.html">urn:gs1:tsd:product_data:xsd:1</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="productdata_xsd.html">ProductData.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="322,127,592,152" href="avplist14.html" alt="Drilldown into avpList"></area>
+                     <area shape="rect" coords="320,95,496,120" href="module.html" alt="Drilldown into module"></area>
+                     <area shape="rect" coords="320,33,607,88" href="componentdescription.html" alt="Drilldown into componentDescription"></area>
+                     <area shape="rect" coords="302,1,561,26" href="componentnumber.html" alt="Drilldown into componentNumber"></area></map><img src="images/tsd_productcomponentrecordtype.png" border="0" alt="XSD Diagram of TSD_ProductComponentRecordType" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:complexType name="TSD_ProductComponentRecordType"&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element name="componentNumber" type="xsd:nonNegativeInteger" /&gt;
+        &lt;xsd:element name="componentDescription" type="shared_common:Description1000Type" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="module" type="shared_common:ExtensionType" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="avpList" type="tsd_common:TSD_AttributeValuePairListType" minOccurs="0" /&gt;
+    &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">componentNumber</td>
+                        <td><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="componentnumber.html">componentNumber</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">componentDescription</td>
+                        <td><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="componentdescription.html">componentDescription</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">module</td>
+                        <td><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="module.html">module</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">avpList</td>
+                        <td><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="avplist14.html">avpList</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><b><i>TSD_ProductComponentRecordType</i></b></li>
+                     <ul>
+                        <li><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="productcomponentrecord.html">productComponentRecord</a></li>
+                     </ul>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="urn_gs1_tsd_product_data_xsd_1.html">product_data</a>:<a href="productcomponentrecord.html">productComponentRecord</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

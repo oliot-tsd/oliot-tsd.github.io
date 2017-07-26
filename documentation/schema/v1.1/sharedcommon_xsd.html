@@ -1,0 +1,1716 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs the schema SharedCommon.xsd in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Schema', 'sharedcommon_xsd');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Schema Name:</b></td>
+               <td>SharedCommon.xsd</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Target Namespace:</b></td>
+               <td><a href="urn_gs1_shared_shared_common_xsd_3.html">urn:gs1:shared:shared_common:xsd:3</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Documentation:</b></td>
+               <td><pre>---------------------------
+© Copyright GS1, 2013
+
+GS1 is providing this XML Schema Definition file and resultant XML file as a service to interested industries.
+This XML Schema Definition file and resultant XML file were developed through a consensus process of interested parties.
+
+Although efforts have been made to ensure that the XML Schema Definition file and resultant XML file are correct, reliable, and technically
+accurate,  GS1 makes NO WARRANTY, EXPRESS OR IMPLIED, THAT THIS XML Schema Definition file and resultant XML file ARE
+CORRECT, WILL NOT REQUIRE MODIFICATION AS EXPERIENCE AND TECHNOLOGICAL ADVANCES DICTATE, OR WILL BE SUITABLE FOR
+ANY PURPOSE OR WORKABLE IN ANY APPLICATION, OR OTHERWISE.  Use of the XML Schema Definition file and resultant XML
+file are with the understanding that GS1 has no liability for any claim to the contrary, or for any damage or loss of any kind or nature.
+
+Version Information:
+Version Number: 3.1
+Date of creation: April 2013
+
+The schema and subsequent updates will be provided on the GS1 websites.
+---------------------------</pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:shared_common="urn:gs1:shared:shared_common:xsd:3" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:gs1:shared:shared_common:xsd:3" version="3.1"&gt;
+    &lt;xsd:annotation&gt;
+        &lt;xsd:documentation&gt;&lt;![CDATA[---------------------------
+© Copyright GS1, 2013
+
+GS1 is providing this XML Schema Definition file and resultant XML file as a service to interested industries.
+This XML Schema Definition file and resultant XML file were developed through a consensus process of interested parties.
+
+Although efforts have been made to ensure that the XML Schema Definition file and resultant XML file are correct, reliable, and technically
+accurate,  GS1 makes NO WARRANTY, EXPRESS OR IMPLIED, THAT THIS XML Schema Definition file and resultant XML file ARE
+CORRECT, WILL NOT REQUIRE MODIFICATION AS EXPERIENCE AND TECHNOLOGICAL ADVANCES DICTATE, OR WILL BE SUITABLE FOR
+ANY PURPOSE OR WORKABLE IN ANY APPLICATION, OR OTHERWISE.  Use of the XML Schema Definition file and resultant XML
+file are with the understanding that GS1 has no liability for any claim to the contrary, or for any damage or loss of any kind or nature.
+
+Version Information:
+Version Number: 3.1
+Date of creation: April 2013
+
+The schema and subsequent updates will be provided on the GS1 websites.
+---------------------------
+]]&gt;&lt;/xsd:documentation&gt;
+    &lt;/xsd:annotation&gt;
+    &lt;xsd:complexType name="AdditionalConsignmentIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalConsignmentIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalConsignmentIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalIndividualAssetIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalIndividualAssetIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalIndividualAssetIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalLogisticUnitIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalLogisticUnitIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalLogisticUnitIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalPartyIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalPartyIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalPartyIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalReturnableAssetIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalReturnableAssetIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalReturnableAssetIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalServiceRelationIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalServiceRelationIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalServiceRelationIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalShipmentIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalShipmentIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalShipmentIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalTradeItemClassificationCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalTradeItemClassificationCodeListCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="additionalTradeItemClassificationCodeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeDescription"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalTradeItemIdentificationType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="additionalTradeItemIdentificationTypeCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AdditionalTradeItemIdentificationTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AddressType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="city"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="cityCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="countryCode" type="shared_common:CountryCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="countyCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="crossStreet"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="currencyOfPartyCode" type="shared_common:CurrencyCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="languageOfThePartyCode" type="shared_common:LanguageCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="name"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="pOBoxNumber"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="postalCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="provinceCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="state"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="streetAddressOne"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="streetAddressTwo"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="streetAddressThree"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="geographicalCoordinates" type="shared_common:GeographicalCoordinatesType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AllowanceChargeTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AmountRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximumAmount" type="shared_common:AmountType"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumAmount" type="shared_common:AmountType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="AmountType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="xsd:float"&gt;
+                &lt;xsd:attribute name="currencyCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="BarCodeTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="codeDescription"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListAgencyCode"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListAgencyCodeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListAgencyName"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListName"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListURI" type="xsd:string"/&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ColourCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="colourCodeListCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="colourCodeListDescription"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="colourCodeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ColourType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="colourCode" type="shared_common:ColourCodeType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="colourDescription" type="shared_common:Description80Type"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CommunicationChannelCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CommunicationChannelType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="communicationChannelCode" type="shared_common:CommunicationChannelCodeType"/&gt;
+            &lt;xsd:element name="communicationValue"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="communicationChannelName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="200"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ConsignmentIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="ginc" type="shared_common:GINCType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalConsignmentIdentification" type="shared_common:AdditionalConsignmentIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ContactType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="contactTypeCode" type="shared_common:ContactTypeCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="personName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="70"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="departmentName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="70"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="jobTitle"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="70"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="responsibility" type="shared_common:Description70Type"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="communicationChannel" type="shared_common:CommunicationChannelType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="afterHoursCommunicationChannel" type="shared_common:CommunicationChannelType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ContactTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CountryCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CountrySubdivisionCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CurrencyCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="CurrencyExchangeRateInformationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="currencyConversionFromCode" type="shared_common:CurrencyCodeType"/&gt;
+            &lt;xsd:element name="currencyConversionToCode" type="shared_common:CurrencyCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="exchangeRate" type="xsd:float"/&gt;
+            &lt;xsd:element minOccurs="0" name="exchangeRateDateTime" type="xsd:dateTime"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="DateFormatCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="DateOptionalTimeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="date" type="xsd:date"/&gt;
+            &lt;xsd:element minOccurs="0" name="time" type="xsd:time"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="DateTimeRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="beginDate" type="xsd:date"/&gt;
+            &lt;xsd:element minOccurs="0" name="beginTime" type="xsd:time"/&gt;
+            &lt;xsd:element minOccurs="0" name="endDate" type="xsd:date"/&gt;
+            &lt;xsd:element minOccurs="0" name="endTime" type="xsd:time"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description1000Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String1000Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description200Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String200Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description2500Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String2500Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description35Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String35Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description5000Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String5000Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description500Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String500Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description70Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String70Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="Description80Type"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="languageCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="DimensionType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="depth" type="shared_common:MeasurementType"/&gt;
+            &lt;xsd:element name="height" type="shared_common:MeasurementType"/&gt;
+            &lt;xsd:element name="width" type="shared_common:MeasurementType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="DocumentReferenceType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="shared_common:EntityIdentificationType"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element minOccurs="0" name="creationDateTime" type="xsd:dateTime"/&gt;
+                    &lt;xsd:element minOccurs="0" name="revisionNumber" type="xsd:positiveInteger"/&gt;
+                    &lt;xsd:element minOccurs="0" name="lineItemNumber" type="xsd:positiveInteger"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType abstract="true" name="DocumentType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="creationDateTime" type="xsd:dateTime"/&gt;
+            &lt;xsd:element name="documentStatusCode" type="shared_common:DocumentStatusEnumerationType"/&gt;
+            &lt;xsd:element minOccurs="0" name="documentActionCode" type="shared_common:DocumentActionEnumerationType"/&gt;
+            &lt;xsd:element minOccurs="0" name="documentStructureVersion"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="lastUpdateDateTime" type="xsd:dateTime"/&gt;
+            &lt;xsd:element minOccurs="0" name="revisionNumber" type="xsd:positiveInteger"/&gt;
+            &lt;xsd:element minOccurs="0" name="extension" type="shared_common:ExtensionType"/&gt;
+            &lt;xsd:element minOccurs="0" name="documentEffectiveDate" type="shared_common:DateOptionalTimeType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="EntityIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="entityIdentification"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="contentOwner" type="shared_common:PartyIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="EntityTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ExtensionType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="FinancialAccountNumberTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="FinancialAccountType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="financialAccountNumber"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element name="financialAccountNumberTypeCode" type="shared_common:FinancialAccountNumberTypeCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="financialAccountName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="FinancialRoutingNumberType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="financialRoutingNumber"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element name="financialRoutingNumberTypeCode" type="shared_common:FinancialRoutingNumberTypeCodeType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="FinancialRoutingNumberTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="GeographicalCoordinatesType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="latitude"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element name="longitude"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="GPCAttributeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gpcAttributeTypeCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:pattern value="\d{8}"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element name="gpcAttributeValueCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:pattern value="\d{8}"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="gpcAttributeTypeName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="105"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="gpcAttributeValueName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="105"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="GS1CodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="IdentifierType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="identificationSchemeAgencyCode"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="identificationSchemeAgencyCodeCodeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="identificationSchemeAgencyName"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="identificationSchemeName"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="IncotermsCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="IndividualAssetIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="giai" type="shared_common:GIAIType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalIndividualAssetIdentification" type="shared_common:AdditionalIndividualAssetIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="LanguageCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="LogisticUnitIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="sscc" type="shared_common:SSCCType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalLogisticUnitIdentification" type="shared_common:AdditionalLogisticUnitIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="MeasurementRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximumMeasurement" type="shared_common:MeasurementType"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumMeasurement" type="shared_common:MeasurementType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="MeasurementType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="xsd:decimal"&gt;
+                &lt;xsd:attribute name="measurementUnitCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="MeasurementUnitCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="MultiDescription70Type"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element maxOccurs="unbounded" name="description" type="shared_common:Description70Type"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="NutrientTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="PartyIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gln" type="shared_common:GLNType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalPartyIdentification" type="shared_common:AdditionalPartyIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="PartyRoleCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="PaymentMethodCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="PaymentTermsTypeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="PaymentTimePeriodType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="dateDue" type="xsd:date"/&gt;
+            &lt;xsd:element minOccurs="0" name="dayOfMonthDue" type="xsd:gDay"/&gt;
+            &lt;xsd:element minOccurs="0" name="timePeriodDue" type="shared_common:TimeMeasurementType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="QuantityRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximumQuantity" type="shared_common:QuantityType"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumQuantity" type="shared_common:QuantityType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="QuantityType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="xsd:decimal"&gt;
+                &lt;xsd:attribute name="measurementUnitCode"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="RangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximum" type="xsd:float"/&gt;
+            &lt;xsd:element minOccurs="0" name="maximumType"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs="0" name="minimum" type="xsd:float"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumType"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="80"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ResponsibleAgencyCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="codeDescription"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ReturnableAssetIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="grai" type="shared_common:GRAIType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalReturnableAssetIdentification" type="shared_common:AdditionalReturnableAssetIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ServiceRelationIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gsrn" type="shared_common:GSRNType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalServiceRelationIdentification" type="shared_common:AdditionalServiceRelationIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="ShipmentIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gsin" type="shared_common:GSINType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalShipmentIdentification" type="shared_common:AdditionalShipmentIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="SizeCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:String80Type"&gt;
+                &lt;xsd:attribute name="sizeCodeListCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="sizeCodeListDescription"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="sizeCodeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="SizeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="descriptiveSize" type="shared_common:Description80Type"/&gt;
+            &lt;xsd:element minOccurs="0" name="sizeCode" type="shared_common:SizeCodeType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="StringRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximumValue" type="xsd:string"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumValue" type="xsd:string"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TargetMarketType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="targetMarketCountryCode" type="shared_common:CountryCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="targetMarketSubdivisionCode" type="shared_common:CountrySubdivisionCodeType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TaxCategoryCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TemperatureMeasurementType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="xsd:decimal"&gt;
+                &lt;xsd:attribute name="temperatureMeasurementUnitCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TemperatureMeasurementUnitCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TemperatureRangeType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs="0" name="maximumTemperature" type="shared_common:TemperatureMeasurementType"/&gt;
+            &lt;xsd:element minOccurs="0" name="minimumTemperature" type="shared_common:TemperatureMeasurementType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TimeMeasurementType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="xsd:decimal"&gt;
+                &lt;xsd:attribute name="timeMeasurementUnitCode" use="required"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="80"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+                &lt;xsd:attribute name="codeListVersion"&gt;
+                    &lt;xsd:simpleType&gt;
+                        &lt;xsd:restriction base="xsd:string"&gt;
+                            &lt;xsd:maxLength value="35"/&gt;
+                            &lt;xsd:minLength value="1"/&gt;
+                        &lt;/xsd:restriction&gt;
+                    &lt;/xsd:simpleType&gt;
+                &lt;/xsd:attribute&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TimeMeasurementUnitCodeType"&gt;
+        &lt;xsd:simpleContent&gt;
+            &lt;xsd:extension base="shared_common:GS1CodeType"/&gt;
+        &lt;/xsd:simpleContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TradeItemClassificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gpcCategoryCode"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:pattern value="\d{8}"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalTradeItemClassificationCode" type="shared_common:AdditionalTradeItemClassificationCodeType"/&gt;
+            &lt;xsd:element minOccurs="0" name="gpcCategoryName"&gt;
+                &lt;xsd:simpleType&gt;
+                    &lt;xsd:restriction base="xsd:string"&gt;
+                        &lt;xsd:maxLength value="105"/&gt;
+                        &lt;xsd:minLength value="1"/&gt;
+                    &lt;/xsd:restriction&gt;
+                &lt;/xsd:simpleType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="gpcAttribute" type="shared_common:GPCAttributeType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TradeItemIdentificationType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="gtin" type="shared_common:GTINType"/&gt;
+            &lt;xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalTradeItemIdentification" type="shared_common:AdditionalTradeItemIdentificationType"/&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TypedEntityIdentificationType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="shared_common:EntityIdentificationType"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element name="entityTypeCode" type="shared_common:EntityTypeCodeType"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:simpleType name="AllowanceOrChargeEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ALLOWANCE"/&gt;
+            &lt;xsd:enumeration value="CHARGE"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="DayOfTheWeekEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="FRIDAY"/&gt;
+            &lt;xsd:enumeration value="MONDAY"/&gt;
+            &lt;xsd:enumeration value="SATURDAY"/&gt;
+            &lt;xsd:enumeration value="SUNDAY"/&gt;
+            &lt;xsd:enumeration value="THURSDAY"/&gt;
+            &lt;xsd:enumeration value="TUESDAY"/&gt;
+            &lt;xsd:enumeration value="WEDNESDAY"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="DocumentActionEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ADD"/&gt;
+            &lt;xsd:enumeration value="CHANGE_BY_REFRESH"/&gt;
+            &lt;xsd:enumeration value="DELETE"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="DocumentStatusEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ADDITIONAL_TRANSMISSION"/&gt;
+            &lt;xsd:enumeration value="COPY"/&gt;
+            &lt;xsd:enumeration value="ORIGINAL"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="EnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"/&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GenderEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="FEMALE"/&gt;
+            &lt;xsd:enumeration value="MALE"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GIAIType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="[-!&amp;quot;%&amp;amp;'()*+,./0-9:;&amp;lt;=&amp;gt;?A-Z_a-z]{4,30}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GINCType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="[-!&amp;quot;%&amp;amp;'()*+,./0-9:;&amp;lt;=&amp;gt;?A-Z_a-z]{4,30}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GLNType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{13}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GRAIType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{14}[-!&amp;quot;%&amp;amp;'()*+,./0-9:;&amp;lt;=&amp;gt;?A-Z_a-z]{0,16}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GSINType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{17}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GSRNType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{18}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="GTINType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{14}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="NonBinaryLogicEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="FALSE"/&gt;
+            &lt;xsd:enumeration value="NOT_APPLICABLE"/&gt;
+            &lt;xsd:enumeration value="TRUE"/&gt;
+            &lt;xsd:enumeration value="UNSPECIFIED"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="ResponseStatusEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ACCEPTED"/&gt;
+            &lt;xsd:enumeration value="MODIFIED"/&gt;
+            &lt;xsd:enumeration value="NO_ACTION"/&gt;
+            &lt;xsd:enumeration value="REJECTED"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="SSCCType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="\d{18}"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String1000Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="1000"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String200Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="200"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String2500Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="2500"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String35Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="35"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String5000Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="5000"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String500Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="500"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String70Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="70"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="String80Type"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:maxLength value="80"/&gt;
+            &lt;xsd:minLength value="1"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="WeekendDayEnumerationType"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="SATURDAY"/&gt;
+            &lt;xsd:enumeration value="SUNDAY"/&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+&lt;/xsd:schema&gt;
+</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="ComplexType" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>ComplexTypes:</b></td>
+            </tr>
+            <tr id="ComplexType_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="additionalconsignmentidentificationtype.html">AdditionalConsignmentIdentificationType</a></li>
+                     <li><a href="additionalconsignmentidentificationtypecodetype.html">AdditionalConsignmentIdentificationTypeCodeType</a></li>
+                     <li><a href="additionalindividualassetidentificationtype.html">AdditionalIndividualAssetIdentificationType</a></li>
+                     <li><a href="additionalindividualassetidentificationtypecodetype.html">AdditionalIndividualAssetIdentificationTypeCodeType</a></li>
+                     <li><a href="additionallogisticunitidentificationtype.html">AdditionalLogisticUnitIdentificationType</a></li>
+                     <li><a href="additionallogisticunitidentificationtypecodetype.html">AdditionalLogisticUnitIdentificationTypeCodeType</a></li>
+                     <li><a href="additionalpartyidentificationtype.html">AdditionalPartyIdentificationType</a></li>
+                     <li><a href="additionalpartyidentificationtypecodetype.html">AdditionalPartyIdentificationTypeCodeType</a></li>
+                     <li><a href="additionalreturnableassetidentificationtype.html">AdditionalReturnableAssetIdentificationType</a></li>
+                     <li><a href="additionalreturnableassetidentificationtypecodetype.html">AdditionalReturnableAssetIdentificationTypeCodeType</a></li>
+                     <li><a href="additionalservicerelationidentificationtype.html">AdditionalServiceRelationIdentificationType</a></li>
+                     <li><a href="additionalservicerelationidentificationtypecodetype.html">AdditionalServiceRelationIdentificationTypeCodeType</a></li>
+                     <li><a href="additionalshipmentidentificationtype.html">AdditionalShipmentIdentificationType</a></li>
+                     <li><a href="additionalshipmentidentificationtypecodetype.html">AdditionalShipmentIdentificationTypeCodeType</a></li>
+                     <li><a href="additionaltradeitemclassificationcodetype.html">AdditionalTradeItemClassificationCodeType</a></li>
+                     <li><a href="additionaltradeitemidentificationtype.html">AdditionalTradeItemIdentificationType</a></li>
+                     <li><a href="additionaltradeitemidentificationtypecodetype.html">AdditionalTradeItemIdentificationTypeCodeType</a></li>
+                     <li><a href="addresstype.html">AddressType</a></li>
+                     <li><a href="allowancechargetypecodetype.html">AllowanceChargeTypeCodeType</a></li>
+                     <li><a href="amountrangetype.html">AmountRangeType</a></li>
+                     <li><a href="amounttype.html">AmountType</a></li>
+                     <li><a href="barcodetypecodetype.html">BarCodeTypeCodeType</a></li>
+                     <li><a href="codetype.html">CodeType</a></li>
+                     <li><a href="colourcodetype.html">ColourCodeType</a></li>
+                     <li><a href="colourtype.html">ColourType</a></li>
+                     <li><a href="communicationchannelcodetype.html">CommunicationChannelCodeType</a></li>
+                     <li><a href="communicationchanneltype.html">CommunicationChannelType</a></li>
+                     <li><a href="consignmentidentificationtype.html">ConsignmentIdentificationType</a></li>
+                     <li><a href="contacttype.html">ContactType</a></li>
+                     <li><a href="contacttypecodetype.html">ContactTypeCodeType</a></li>
+                     <li><a href="countrycodetype.html">CountryCodeType</a></li>
+                     <li><a href="countrysubdivisioncodetype.html">CountrySubdivisionCodeType</a></li>
+                     <li><a href="currencycodetype.html">CurrencyCodeType</a></li>
+                     <li><a href="currencyexchangerateinformationtype.html">CurrencyExchangeRateInformationType</a></li>
+                     <li><a href="dateformatcodetype.html">DateFormatCodeType</a></li>
+                     <li><a href="dateoptionaltimetype.html">DateOptionalTimeType</a></li>
+                     <li><a href="datetimerangetype.html">DateTimeRangeType</a></li>
+                     <li><a href="description1000type.html">Description1000Type</a></li>
+                     <li><a href="description200type.html">Description200Type</a></li>
+                     <li><a href="description2500type.html">Description2500Type</a></li>
+                     <li><a href="description35type.html">Description35Type</a></li>
+                     <li><a href="description5000type.html">Description5000Type</a></li>
+                     <li><a href="description500type.html">Description500Type</a></li>
+                     <li><a href="description70type.html">Description70Type</a></li>
+                     <li><a href="description80type.html">Description80Type</a></li>
+                     <li><a href="dimensiontype.html">DimensionType</a></li>
+                     <li><a href="documentreferencetype.html">DocumentReferenceType</a></li>
+                     <li><a href="documenttype.html">DocumentType</a></li>
+                     <li><a href="entityidentificationtype.html">EntityIdentificationType</a></li>
+                     <li><a href="entitytypecodetype.html">EntityTypeCodeType</a></li>
+                     <li><a href="extensiontype.html">ExtensionType</a></li>
+                     <li><a href="financialaccountnumbertypecodetype.html">FinancialAccountNumberTypeCodeType</a></li>
+                     <li><a href="financialaccounttype.html">FinancialAccountType</a></li>
+                     <li><a href="financialroutingnumbertype.html">FinancialRoutingNumberType</a></li>
+                     <li><a href="financialroutingnumbertypecodetype.html">FinancialRoutingNumberTypeCodeType</a></li>
+                     <li><a href="gpcattributetype.html">GPCAttributeType</a></li>
+                     <li><a href="gs1codetype.html">GS1CodeType</a></li>
+                     <li><a href="geographicalcoordinatestype.html">GeographicalCoordinatesType</a></li>
+                     <li><a href="identifiertype.html">IdentifierType</a></li>
+                     <li><a href="incotermscodetype.html">IncotermsCodeType</a></li>
+                     <li><a href="individualassetidentificationtype.html">IndividualAssetIdentificationType</a></li>
+                     <li><a href="languagecodetype.html">LanguageCodeType</a></li>
+                     <li><a href="logisticunitidentificationtype.html">LogisticUnitIdentificationType</a></li>
+                     <li><a href="measurementrangetype.html">MeasurementRangeType</a></li>
+                     <li><a href="measurementtype.html">MeasurementType</a></li>
+                     <li><a href="measurementunitcodetype.html">MeasurementUnitCodeType</a></li>
+                     <li><a href="multidescription70type.html">MultiDescription70Type</a></li>
+                     <li><a href="nutrienttypecodetype.html">NutrientTypeCodeType</a></li>
+                     <li><a href="partyidentificationtype.html">PartyIdentificationType</a></li>
+                     <li><a href="partyrolecodetype.html">PartyRoleCodeType</a></li>
+                     <li><a href="paymentmethodcodetype.html">PaymentMethodCodeType</a></li>
+                     <li><a href="paymenttermstypecodetype.html">PaymentTermsTypeCodeType</a></li>
+                     <li><a href="paymenttimeperiodtype.html">PaymentTimePeriodType</a></li>
+                     <li><a href="quantityrangetype.html">QuantityRangeType</a></li>
+                     <li><a href="quantitytype.html">QuantityType</a></li>
+                     <li><a href="rangetype.html">RangeType</a></li>
+                     <li><a href="responsibleagencycodetype.html">ResponsibleAgencyCodeType</a></li>
+                     <li><a href="returnableassetidentificationtype.html">ReturnableAssetIdentificationType</a></li>
+                     <li><a href="servicerelationidentificationtype.html">ServiceRelationIdentificationType</a></li>
+                     <li><a href="shipmentidentificationtype.html">ShipmentIdentificationType</a></li>
+                     <li><a href="sizecodetype.html">SizeCodeType</a></li>
+                     <li><a href="sizetype.html">SizeType</a></li>
+                     <li><a href="stringrangetype.html">StringRangeType</a></li>
+                     <li><a href="targetmarkettype.html">TargetMarketType</a></li>
+                     <li><a href="taxcategorycodetype.html">TaxCategoryCodeType</a></li>
+                     <li><a href="temperaturemeasurementtype.html">TemperatureMeasurementType</a></li>
+                     <li><a href="temperaturemeasurementunitcodetype.html">TemperatureMeasurementUnitCodeType</a></li>
+                     <li><a href="temperaturerangetype.html">TemperatureRangeType</a></li>
+                     <li><a href="timemeasurementtype.html">TimeMeasurementType</a></li>
+                     <li><a href="timemeasurementunitcodetype.html">TimeMeasurementUnitCodeType</a></li>
+                     <li><a href="tradeitemclassificationtype.html">TradeItemClassificationType</a></li>
+                     <li><a href="tradeitemidentificationtype.html">TradeItemIdentificationType</a></li>
+                     <li><a href="typedentityidentificationtype.html">TypedEntityIdentificationType</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="SimpleType" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>SimpleTypes:</b></td>
+            </tr>
+            <tr id="SimpleType_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="allowanceorchargeenumerationtype.html">AllowanceOrChargeEnumerationType</a></li>
+                     <li><a href="dayoftheweekenumerationtype.html">DayOfTheWeekEnumerationType</a></li>
+                     <li><a href="documentactionenumerationtype.html">DocumentActionEnumerationType</a></li>
+                     <li><a href="documentstatusenumerationtype.html">DocumentStatusEnumerationType</a></li>
+                     <li><a href="enumerationtype.html">EnumerationType</a></li>
+                     <li><a href="giaitype.html">GIAIType</a></li>
+                     <li><a href="ginctype.html">GINCType</a></li>
+                     <li><a href="glntype.html">GLNType</a></li>
+                     <li><a href="graitype.html">GRAIType</a></li>
+                     <li><a href="gsintype.html">GSINType</a></li>
+                     <li><a href="gsrntype.html">GSRNType</a></li>
+                     <li><a href="gtintype.html">GTINType</a></li>
+                     <li><a href="genderenumerationtype.html">GenderEnumerationType</a></li>
+                     <li><a href="nonbinarylogicenumerationtype.html">NonBinaryLogicEnumerationType</a></li>
+                     <li><a href="responsestatusenumerationtype.html">ResponseStatusEnumerationType</a></li>
+                     <li><a href="sscctype.html">SSCCType</a></li>
+                     <li><a href="string1000type.html">String1000Type</a></li>
+                     <li><a href="string200type.html">String200Type</a></li>
+                     <li><a href="string2500type.html">String2500Type</a></li>
+                     <li><a href="string35type.html">String35Type</a></li>
+                     <li><a href="string5000type.html">String5000Type</a></li>
+                     <li><a href="string500type.html">String500Type</a></li>
+                     <li><a href="string70type.html">String70Type</a></li>
+                     <li><a href="string80type.html">String80Type</a></li>
+                     <li><a href="weekenddayenumerationtype.html">WeekendDayEnumerationType</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

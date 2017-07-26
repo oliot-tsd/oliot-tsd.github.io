@@ -1,0 +1,160 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for schema item DocumentType in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'documenttype');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>DocumentType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="urn_gs1_shared_shared_common_xsd_3.html">urn:gs1:shared:shared_common:xsd:3</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="sharedcommon_xsd.html">SharedCommon.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td>True</td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="211,339,510,364" href="documenteffectivedate.html" alt="Drilldown into documentEffectiveDate"></area>
+                     <area shape="rect" coords="211,307,394,332" href="extension.html" alt="Drilldown into extension"></area>
+                     <area shape="rect" coords="211,275,427,300" href="revisionnumber1.html" alt="Drilldown into revisionNumber"></area>
+                     <area shape="rect" coords="211,243,419,268" href="lastupdatedatetime.html" alt="Drilldown into lastUpdateDateTime"></area>
+                     <area shape="rect" coords="211,180,460,235" href="documentstructureversion.html" alt="Drilldown into documentStructureVersion"></area>
+                     <area shape="rect" coords="211,106,564,172" href="documentactioncode.html" alt="Drilldown into documentActionCode"></area>
+                     <area shape="rect" coords="191,33,543,99" href="documentstatuscode.html" alt="Drilldown into documentStatusCode"></area>
+                     <area shape="rect" coords="191,1,385,26" href="creationdatetime1.html" alt="Drilldown into creationDateTime"></area></map><img src="images/documenttype.png" border="0" alt="XSD Diagram of DocumentType" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:complexType abstract="true" name="DocumentType"&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element name="creationDateTime" type="xsd:dateTime" /&gt;
+        &lt;xsd:element name="documentStatusCode" type="shared_common:DocumentStatusEnumerationType" /&gt;
+        &lt;xsd:element minOccurs="0" name="documentActionCode" type="shared_common:DocumentActionEnumerationType" /&gt;
+        &lt;xsd:element minOccurs="0" name="documentStructureVersion"&gt;
+            &lt;xsd:simpleType&gt;
+                &lt;xsd:restriction base="xsd:string"&gt;
+                    &lt;xsd:maxLength value="80" /&gt;
+                    &lt;xsd:minLength value="1" /&gt;
+                &lt;/xsd:restriction&gt;
+            &lt;/xsd:simpleType&gt;
+        &lt;/xsd:element&gt;
+        &lt;xsd:element minOccurs="0" name="lastUpdateDateTime" type="xsd:dateTime" /&gt;
+        &lt;xsd:element minOccurs="0" name="revisionNumber" type="xsd:positiveInteger" /&gt;
+        &lt;xsd:element minOccurs="0" name="extension" type="shared_common:ExtensionType" /&gt;
+        &lt;xsd:element minOccurs="0" name="documentEffectiveDate" type="shared_common:DateOptionalTimeType" /&gt;
+    &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">creationDateTime</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="creationdatetime1.html">creationDateTime</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">documentStatusCode</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="documentstatuscode.html">documentStatusCode</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">documentActionCode</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="documentactioncode.html">documentActionCode</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">documentStructureVersion</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="documentstructureversion.html">documentStructureVersion</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">lastUpdateDateTime</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="lastupdatedatetime.html">lastUpdateDateTime</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">revisionNumber</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="revisionnumber1.html">revisionNumber</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">extension</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="extension.html">extension</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">documentEffectiveDate</td>
+                        <td><a href="urn_gs1_shared_shared_common_xsd_3.html">shared_common</a>:<a href="documenteffectivedate.html">documentEffectiveDate</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for schema item TSD_PreparationMethodType in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'tsd_preparationmethodtype');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>TSD_PreparationMethodType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">urn:gs1:tsd:food_and_beverage_preparation_information_module:xsd:1</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="foodandbeveragepreparationinformationmodule_xsd.html">FoodAndBeveragePreparationInformationModule.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="288,138,558,163" href="avplist5.html" alt="Drilldown into avpList"></area>
+                     <area shape="rect" coords="286,63,654,130" href="preparationinstructions.html" alt="Drilldown into preparationInstructions"></area>
+                     <area shape="rect" coords="288,1,628,56" href="preparationtypecode.html" alt="Drilldown into preparationTypeCode"></area></map><img src="images/tsd_preparationmethodtype.png" border="0" alt="XSD Diagram of TSD_PreparationMethodType" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:complexType name="TSD_PreparationMethodType"&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element name="preparationTypeCode" type="food_and_beverage_preparation_information_module:TSD_PreparationTypeCodeType" minOccurs="0" /&gt;
+        &lt;xsd:element name="preparationInstructions" type="tsd_common:TSD_FormattedDescription2500Type" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="avpList" type="tsd_common:TSD_AttributeValuePairListType" minOccurs="0" /&gt;
+    &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">preparationTypeCode</td>
+                        <td><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">food_and_beverage_preparation_information_module</a>:<a href="preparationtypecode.html">preparationTypeCode</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">preparationInstructions</td>
+                        <td><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">food_and_beverage_preparation_information_module</a>:<a href="preparationinstructions.html">preparationInstructions</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">avpList</td>
+                        <td><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">food_and_beverage_preparation_information_module</a>:<a href="avplist5.html">avpList</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><b><i>TSD_PreparationMethodType</i></b></li>
+                     <ul>
+                        <li><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">food_and_beverage_preparation_information_module</a>:<a href="preparationmethod.html">preparationMethod</a></li>
+                     </ul>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html">food_and_beverage_preparation_information_module</a>:<a href="preparationmethod.html">preparationMethod</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

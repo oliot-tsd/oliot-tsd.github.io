@@ -1,0 +1,196 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for schema item TSD_BasicProductInformationModuleType in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'tsd_basicproductinformationmoduletype');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>TSD_BasicProductInformationModuleType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">urn:gs1:tsd:basic_product_information_module:xsd:1</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="basicproductinformationmodule_xsd.html">BasicProductInformationModule.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="324,369,594,394" href="avplist.html" alt="Drilldown into avpList"></area>
+                     <area shape="rect" coords="322,337,690,362" href="packagingsignatureline.html" alt="Drilldown into packagingSignatureLine"></area>
+                     <area shape="rect" coords="322,305,539,330" href="imagelink.html" alt="Drilldown into imageLink"></area>
+                     <area shape="rect" coords="322,273,683,298" href="productinformationlink.html" alt="Drilldown into productInformationLink"></area>
+                     <area shape="rect" coords="304,241,659,266" href="brandnameinformation.html" alt="Drilldown into brandNameInformation"></area>
+                     <area shape="rect" coords="322,178,604,233" href="regulatedproductname.html" alt="Drilldown into regulatedProductName"></area>
+                     <area shape="rect" coords="324,126,524,170" href="gpccategorycode1.html" alt="Drilldown into gpcCategoryCode"></area>
+                     <area shape="rect" coords="322,63,655,118" href="consumermarketingdescription.html" alt="Drilldown into consumerMarketingDescription"></area>
+                     <area shape="rect" coords="322,1,546,56" href="productname.html" alt="Drilldown into productName"></area></map><img src="images/tsd_basicproductinformationmoduletype.png" border="0" alt="XSD Diagram of TSD_BasicProductInformationModuleType" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:complexType name="TSD_BasicProductInformationModuleType"&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element name="productName" type="shared_common:Description80Type" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="consumerMarketingDescription" type="shared_common:Description2500Type" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="gpcCategoryCode" minOccurs="0"&gt;
+            &lt;xsd:simpleType&gt;
+                &lt;xsd:restriction base="xsd:string"&gt;
+                    &lt;xsd:pattern value="\d{8}" /&gt;
+                &lt;/xsd:restriction&gt;
+            &lt;/xsd:simpleType&gt;
+        &lt;/xsd:element&gt;
+        &lt;xsd:element name="regulatedProductName" type="shared_common:Description500Type" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="brandNameInformation" type="basic_product_information_module:TSD_BrandNameInformationType" /&gt;
+        &lt;xsd:element name="productInformationLink" type="tsd_common:TSD_ProductInformationLinkType" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="imageLink" type="tsd_common:TSD_ImageLinkType" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="packagingSignatureLine" type="basic_product_information_module:TSD_PackagingSignatureLineType" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element name="avpList" type="tsd_common:TSD_AttributeValuePairListType" minOccurs="0" /&gt;
+    &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">productName</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="productname.html">productName</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">consumerMarketingDescription</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="consumermarketingdescription.html">consumerMarketingDescription</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">gpcCategoryCode</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="gpccategorycode1.html">gpcCategoryCode</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">regulatedProductName</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="regulatedproductname.html">regulatedProductName</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">brandNameInformation</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="brandnameinformation.html">brandNameInformation</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">productInformationLink</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="productinformationlink.html">productInformationLink</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">imageLink</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="imagelink.html">imageLink</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">packagingSignatureLine</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="packagingsignatureline.html">packagingSignatureLine</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">avpList</td>
+                        <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="avplist.html">avpList</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><b><i>TSD_BasicProductInformationModuleType</i></b></li>
+                     <ul>
+                        <li><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="basicproductinformationmodule.html">basicProductInformationModule</a></li>
+                     </ul>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html">basic_product_information_module</a>:<a href="basicproductinformationmodule.html">basicProductInformationModule</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs the schema QueryByGtinResponse.xsd in GS1 Trusted Source of Data</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Schema', 'querybygtinresponse_xsd');
+                        --></script><div class="pageheader">
+         Documentation for GS1 Trusted Source of Data
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Schema Name:</b></td>
+               <td>QueryByGtinResponse.xsd</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Target Namespace:</b></td>
+               <td><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html">urn:gs1:tsd:query_by_gtin_response:xsd:1</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Documentation:</b></td>
+               <td><pre>---------------------------
+© Copyright GS1, 2013
+
+GS1 is providing this XML Schema Definition file and resultant XML file as a service to interested industries.
+This XML Schema Definition file and resultant XML file were developed through a consensus process of interested parties.
+
+Although efforts have been made to ensure that the XML Schema Definition file and resultant XML file are correct, reliable, and technically
+accurate,  GS1 makes NO WARRANTY, EXPRESS OR IMPLIED, THAT THIS XML Schema Definition file and resultant XML file ARE
+CORRECT, WILL NOT REQUIRE MODIFICATION AS EXPERIENCE AND TECHNOLOGICAL ADVANCES DICTATE, OR WILL BE SUITABLE FOR
+ANY PURPOSE OR WORKABLE IN ANY APPLICATION, OR OTHERWISE.  Use of the XML Schema Definition file and resultant XML
+file are with the understanding that GS1 has no liability for any claim to the contrary, or for any damage or loss of any kind or nature.
+
+Version Information:
+Version Number: 1.1
+Date of creation: April 2013
+
+The schema and subsequent updates will be provided on the GS1 websites.
+---------------------------</pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:product_data="urn:gs1:tsd:product_data:xsd:1" xmlns:query_by_gtin_response="urn:gs1:tsd:query_by_gtin_response:xsd:1" xmlns:shared_common="urn:gs1:shared:shared_common:xsd:3" xmlns:tsd_common="urn:gs1:tsd:tsd_common:xsd:1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:gs1:tsd:query_by_gtin_response:xsd:1" version="1.1"&gt;
+    &lt;xsd:annotation&gt;
+        &lt;xsd:documentation&gt;&lt;![CDATA[---------------------------
+© Copyright GS1, 2013
+
+GS1 is providing this XML Schema Definition file and resultant XML file as a service to interested industries.
+This XML Schema Definition file and resultant XML file were developed through a consensus process of interested parties.
+
+Although efforts have been made to ensure that the XML Schema Definition file and resultant XML file are correct, reliable, and technically
+accurate,  GS1 makes NO WARRANTY, EXPRESS OR IMPLIED, THAT THIS XML Schema Definition file and resultant XML file ARE
+CORRECT, WILL NOT REQUIRE MODIFICATION AS EXPERIENCE AND TECHNOLOGICAL ADVANCES DICTATE, OR WILL BE SUITABLE FOR
+ANY PURPOSE OR WORKABLE IN ANY APPLICATION, OR OTHERWISE.  Use of the XML Schema Definition file and resultant XML
+file are with the understanding that GS1 has no liability for any claim to the contrary, or for any damage or loss of any kind or nature.
+
+Version Information:
+Version Number: 1.1
+Date of creation: April 2013
+
+The schema and subsequent updates will be provided on the GS1 websites.
+---------------------------
+]]&gt;&lt;/xsd:documentation&gt;
+    &lt;/xsd:annotation&gt;
+    &lt;xsd:import namespace="urn:gs1:shared:shared_common:xsd:3" schemaLocation="../shared/SharedCommon.xsd"/&gt;
+    &lt;xsd:import namespace="urn:gs1:tsd:product_data:xsd:1" schemaLocation="ProductData.xsd"/&gt;
+    &lt;xsd:import namespace="urn:gs1:tsd:tsd_common:xsd:1" schemaLocation="TSDCommon.xsd"/&gt;
+    &lt;xsd:element name="queryByGtinResponse" type="query_by_gtin_response:TSD_QueryByGTINResponseType"/&gt;
+    &lt;xsd:complexType name="TSD_ImplementationExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_InvalidGTINExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_InvalidRequestExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_InvalidTargetMarketExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_NoDataExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_QueryByGTINResponseType"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:choice&gt;
+                &lt;xsd:element name="productData" type="product_data:TSD_ProductDataType"/&gt;
+                &lt;xsd:element name="noDataException" type="query_by_gtin_response:TSD_NoDataExceptionType"/&gt;
+                &lt;xsd:element name="invalidGTINException" type="query_by_gtin_response:TSD_InvalidGTINExceptionType"/&gt;
+                &lt;xsd:element name="invalidTargetMarketException" type="query_by_gtin_response:TSD_InvalidTargetMarketExceptionType"/&gt;
+                &lt;xsd:element name="unsupportedVersionException" type="query_by_gtin_response:TSD_UnsupportedVersionExceptionType"/&gt;
+                &lt;xsd:element name="invalidRequestException" type="query_by_gtin_response:TSD_InvalidRequestExceptionType"/&gt;
+                &lt;xsd:element name="securityException" type="query_by_gtin_response:TSD_SecurityExceptionType"/&gt;
+                &lt;xsd:element name="implementationException" type="query_by_gtin_response:TSD_ImplementationExceptionType"/&gt;
+            &lt;/xsd:choice&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_SecurityExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element minOccurs="0" name="exceptionContactDescription" type="shared_common:Description200Type"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:extension&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:complexType name="TSD_UnsupportedVersionExceptionType"&gt;
+        &lt;xsd:complexContent&gt;
+            &lt;xsd:extension base="tsd_common:TSD_ExceptionType"/&gt;
+        &lt;/xsd:complexContent&gt;
+    &lt;/xsd:complexType&gt;
+&lt;/xsd:schema&gt;
+</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="ComplexType" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>ComplexTypes:</b></td>
+            </tr>
+            <tr id="ComplexType_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="tsd_implementationexceptiontype.html">TSD_ImplementationExceptionType</a></li>
+                     <li><a href="tsd_invalidgtinexceptiontype.html">TSD_InvalidGTINExceptionType</a></li>
+                     <li><a href="tsd_invalidrequestexceptiontype.html">TSD_InvalidRequestExceptionType</a></li>
+                     <li><a href="tsd_invalidtargetmarketexceptiontype.html">TSD_InvalidTargetMarketExceptionType</a></li>
+                     <li><a href="tsd_nodataexceptiontype.html">TSD_NoDataExceptionType</a></li>
+                     <li><a href="tsd_querybygtinresponsetype.html">TSD_QueryByGTINResponseType</a></li>
+                     <li><a href="tsd_securityexceptiontype.html">TSD_SecurityExceptionType</a></li>
+                     <li><a href="tsd_unsupportedversionexceptiontype.html">TSD_UnsupportedVersionExceptionType</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="Element" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Elements:</b></td>
+            </tr>
+            <tr id="Element_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="querybygtinresponse.html">queryByGtinResponse</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for GS1 Trusted Source of Data<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.8.7566</a></div>
+   </body>
+</html>

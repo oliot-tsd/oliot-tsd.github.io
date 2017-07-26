@@ -1,0 +1,489 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>XML Schema Documenatation Menu</title>
+      <!-- saved from url=(0014)about:internet --><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="searchindex.js"></script><link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript">
+         <!--
+            $(document).ready(function () {
+                setTabs();
+            });
+    
+        	var filenames = null;
+        	var keywordIndex = null;
+
+        	function getSearchJS(searchBoxID, ulResults) 
+            {
+        		if (filenames == null) {
+        		    filenames = CreateFileRefs();
+        		}
+        		if (keywordIndex == null) {
+        		    keywordIndex = CreateWordIndex();
+        		}
+
+        		var data = '';
+        		var searchText = $("#" + searchBoxID).attr("value");
+        		var searchTerms = searchText.split(' ');
+        		var fileIndexResults = new Array();
+
+        		for (var sti = 0; sti < searchTerms.length; sti++) {
+        		    var searchTerm = trim(searchTerms[sti]).toLowerCase();
+
+        		    for (var i = 0; i < keywordIndex.length; i++) {
+        		        if (keywordIndex[i][0].indexOf(searchTerm) != -1) {
+        		            fileIndexResults = fileIndexResults.concat(keywordIndex[i][1]);
+        		        }
+        		    }
+        		}
+
+        		fileIndexResults = unique(fileIndexResults);
+        		for (var ri = 0; ri < fileIndexResults.length; ri++) {
+        		    var resultOffset = fileIndexResults[ri];
+        		    data += "<li><a href='" + filenames[resultOffset][1] + "' target='ContentFrame'>" + filenames[resultOffset][0] + "</a></li>";
+        		}
+
+        		if (data == '')
+        		    data = "<li>No Results</li>";
+
+        		$("#" + ulResults).html(data);
+        	}
+                        --></script></head>
+   <body>
+      <form action="CompleteMenu.html">
+         <ul class="tabs">
+            <li><a href="#tab1">Index</a></li>
+            <li><a href="#tab2">Search</a></li>
+         </ul>
+         <div class="tab_container">
+            <div id="tab1" class="tab_content">
+               <div>
+                  <ul id="ulMenu" class="treeview">
+                     <li id="Schema" class="parent"><a href="javascript:toggleNode('Schema')"><img height="11" width="11" src="images/plus.gif"></img>Schema</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="basicproductinformationmodule_xsd"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="basicproductinformationmodule_xsd.html" target="ContentFrame">BasicProductInformationModule.xsd</a></li>
+                           <li id="foodandbeverageingredientinformationmodule_xsd"><a href="urn_gs1_tsd_food_and_beverage_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_ingredient_information_module</a>:
+                              <a href="foodandbeverageingredientinformationmodule_xsd.html" target="ContentFrame">FoodAndBeverageIngredientInformationModule.xsd</a></li>
+                           <li id="foodandbeveragepreparationinformationmodule_xsd"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_preparation_information_module</a>:
+                              <a href="foodandbeveragepreparationinformationmodule_xsd.html" target="ContentFrame">FoodAndBeveragePreparationInformationModule.xsd</a></li>
+                           <li id="nutritionalproductinformationmodule_xsd"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="nutritionalproductinformationmodule_xsd.html" target="ContentFrame">NutritionalProductInformationModule.xsd</a></li>
+                           <li id="productallergeninformationmodule_xsd"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="productallergeninformationmodule_xsd.html" target="ContentFrame">ProductAllergenInformationModule.xsd</a></li>
+                           <li id="productclaimsandendorsementsmodule_xsd"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="productclaimsandendorsementsmodule_xsd.html" target="ContentFrame">ProductClaimsAndEndorsementsModule.xsd</a></li>
+                           <li id="productdata_xsd"><a href="urn_gs1_tsd_product_data_xsd_1.html" target="ContentFrame">product_data</a>:
+                              <a href="productdata_xsd.html" target="ContentFrame">ProductData.xsd</a></li>
+                           <li id="productinstructionsmodule_xsd"><a href="urn_gs1_tsd_product_instructions_module_xsd_1.html" target="ContentFrame">product_instructions_module</a>:
+                              <a href="productinstructionsmodule_xsd.html" target="ContentFrame">ProductInstructionsModule.xsd</a></li>
+                           <li id="productorigininformationmodule_xsd"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="productorigininformationmodule_xsd.html" target="ContentFrame">ProductOriginInformationModule.xsd</a></li>
+                           <li id="productquantityinformationmodule_xsd"><a href="urn_gs1_tsd_product_quantity_information_module_xsd_1.html" target="ContentFrame">product_quantity_information_module</a>:
+                              <a href="productquantityinformationmodule_xsd.html" target="ContentFrame">ProductQuantityInformationModule.xsd</a></li>
+                           <li id="querybygtinresponse_xsd"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="querybygtinresponse_xsd.html" target="ContentFrame">QueryByGtinResponse.xsd</a></li>
+                           <li id="sharedcommon_xsd"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="sharedcommon_xsd.html" target="ContentFrame">SharedCommon.xsd</a></li>
+                           <li id="tsdcommon_xsd"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsdcommon_xsd.html" target="ContentFrame">TSDCommon.xsd</a></li>
+                        </ul>
+                     </li>
+                     <li id="ComplexType" class="parent"><a href="javascript:toggleNode('ComplexType')"><img height="11" width="11" src="images/plus.gif"></img>ComplexType</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="additionalconsignmentidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalconsignmentidentificationtype.html" target="ContentFrame">AdditionalConsignmentIdentificationType</a></li>
+                           <li id="additionalconsignmentidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalconsignmentidentificationtypecodetype.html" target="ContentFrame">AdditionalConsignmentIdentificationTypeCodeType</a></li>
+                           <li id="additionalindividualassetidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalindividualassetidentificationtype.html" target="ContentFrame">AdditionalIndividualAssetIdentificationType</a></li>
+                           <li id="additionalindividualassetidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalindividualassetidentificationtypecodetype.html" target="ContentFrame">AdditionalIndividualAssetIdentificationTypeCodeType</a></li>
+                           <li id="additionallogisticunitidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionallogisticunitidentificationtype.html" target="ContentFrame">AdditionalLogisticUnitIdentificationType</a></li>
+                           <li id="additionallogisticunitidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionallogisticunitidentificationtypecodetype.html" target="ContentFrame">AdditionalLogisticUnitIdentificationTypeCodeType</a></li>
+                           <li id="additionalpartyidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalpartyidentificationtype.html" target="ContentFrame">AdditionalPartyIdentificationType</a></li>
+                           <li id="additionalpartyidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalpartyidentificationtypecodetype.html" target="ContentFrame">AdditionalPartyIdentificationTypeCodeType</a></li>
+                           <li id="additionalreturnableassetidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalreturnableassetidentificationtype.html" target="ContentFrame">AdditionalReturnableAssetIdentificationType</a></li>
+                           <li id="additionalreturnableassetidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalreturnableassetidentificationtypecodetype.html" target="ContentFrame">AdditionalReturnableAssetIdentificationTypeCodeType</a></li>
+                           <li id="additionalservicerelationidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalservicerelationidentificationtype.html" target="ContentFrame">AdditionalServiceRelationIdentificationType</a></li>
+                           <li id="additionalservicerelationidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalservicerelationidentificationtypecodetype.html" target="ContentFrame">AdditionalServiceRelationIdentificationTypeCodeType</a></li>
+                           <li id="additionalshipmentidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalshipmentidentificationtype.html" target="ContentFrame">AdditionalShipmentIdentificationType</a></li>
+                           <li id="additionalshipmentidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionalshipmentidentificationtypecodetype.html" target="ContentFrame">AdditionalShipmentIdentificationTypeCodeType</a></li>
+                           <li id="additionaltradeitemclassificationcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionaltradeitemclassificationcodetype.html" target="ContentFrame">AdditionalTradeItemClassificationCodeType</a></li>
+                           <li id="additionaltradeitemidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionaltradeitemidentificationtype.html" target="ContentFrame">AdditionalTradeItemIdentificationType</a></li>
+                           <li id="additionaltradeitemidentificationtypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="additionaltradeitemidentificationtypecodetype.html" target="ContentFrame">AdditionalTradeItemIdentificationTypeCodeType</a></li>
+                           <li id="addresstype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="addresstype.html" target="ContentFrame">AddressType</a></li>
+                           <li id="allowancechargetypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="allowancechargetypecodetype.html" target="ContentFrame">AllowanceChargeTypeCodeType</a></li>
+                           <li id="amountrangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="amountrangetype.html" target="ContentFrame">AmountRangeType</a></li>
+                           <li id="amounttype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="amounttype.html" target="ContentFrame">AmountType</a></li>
+                           <li id="barcodetypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="barcodetypecodetype.html" target="ContentFrame">BarCodeTypeCodeType</a></li>
+                           <li id="codetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="codetype.html" target="ContentFrame">CodeType</a></li>
+                           <li id="colourcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="colourcodetype.html" target="ContentFrame">ColourCodeType</a></li>
+                           <li id="colourtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="colourtype.html" target="ContentFrame">ColourType</a></li>
+                           <li id="communicationchannelcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="communicationchannelcodetype.html" target="ContentFrame">CommunicationChannelCodeType</a></li>
+                           <li id="communicationchanneltype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="communicationchanneltype.html" target="ContentFrame">CommunicationChannelType</a></li>
+                           <li id="consignmentidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="consignmentidentificationtype.html" target="ContentFrame">ConsignmentIdentificationType</a></li>
+                           <li id="contacttype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="contacttype.html" target="ContentFrame">ContactType</a></li>
+                           <li id="contacttypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="contacttypecodetype.html" target="ContentFrame">ContactTypeCodeType</a></li>
+                           <li id="countrycodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="countrycodetype.html" target="ContentFrame">CountryCodeType</a></li>
+                           <li id="countrysubdivisioncodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="countrysubdivisioncodetype.html" target="ContentFrame">CountrySubdivisionCodeType</a></li>
+                           <li id="currencycodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="currencycodetype.html" target="ContentFrame">CurrencyCodeType</a></li>
+                           <li id="currencyexchangerateinformationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="currencyexchangerateinformationtype.html" target="ContentFrame">CurrencyExchangeRateInformationType</a></li>
+                           <li id="dateformatcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="dateformatcodetype.html" target="ContentFrame">DateFormatCodeType</a></li>
+                           <li id="dateoptionaltimetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="dateoptionaltimetype.html" target="ContentFrame">DateOptionalTimeType</a></li>
+                           <li id="datetimerangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="datetimerangetype.html" target="ContentFrame">DateTimeRangeType</a></li>
+                           <li id="description1000type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description1000type.html" target="ContentFrame">Description1000Type</a></li>
+                           <li id="description200type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description200type.html" target="ContentFrame">Description200Type</a></li>
+                           <li id="description2500type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description2500type.html" target="ContentFrame">Description2500Type</a></li>
+                           <li id="description35type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description35type.html" target="ContentFrame">Description35Type</a></li>
+                           <li id="description5000type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description5000type.html" target="ContentFrame">Description5000Type</a></li>
+                           <li id="description500type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description500type.html" target="ContentFrame">Description500Type</a></li>
+                           <li id="description70type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description70type.html" target="ContentFrame">Description70Type</a></li>
+                           <li id="description80type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="description80type.html" target="ContentFrame">Description80Type</a></li>
+                           <li id="dimensiontype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="dimensiontype.html" target="ContentFrame">DimensionType</a></li>
+                           <li id="documentreferencetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="documentreferencetype.html" target="ContentFrame">DocumentReferenceType</a></li>
+                           <li id="documenttype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="documenttype.html" target="ContentFrame">DocumentType</a></li>
+                           <li id="entityidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="entityidentificationtype.html" target="ContentFrame">EntityIdentificationType</a></li>
+                           <li id="entitytypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="entitytypecodetype.html" target="ContentFrame">EntityTypeCodeType</a></li>
+                           <li id="extensiontype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="extensiontype.html" target="ContentFrame">ExtensionType</a></li>
+                           <li id="financialaccountnumbertypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="financialaccountnumbertypecodetype.html" target="ContentFrame">FinancialAccountNumberTypeCodeType</a></li>
+                           <li id="financialaccounttype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="financialaccounttype.html" target="ContentFrame">FinancialAccountType</a></li>
+                           <li id="financialroutingnumbertype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="financialroutingnumbertype.html" target="ContentFrame">FinancialRoutingNumberType</a></li>
+                           <li id="financialroutingnumbertypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="financialroutingnumbertypecodetype.html" target="ContentFrame">FinancialRoutingNumberTypeCodeType</a></li>
+                           <li id="gpcattributetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="gpcattributetype.html" target="ContentFrame">GPCAttributeType</a></li>
+                           <li id="gs1codetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="gs1codetype.html" target="ContentFrame">GS1CodeType</a></li>
+                           <li id="geographicalcoordinatestype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="geographicalcoordinatestype.html" target="ContentFrame">GeographicalCoordinatesType</a></li>
+                           <li id="identifiertype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="identifiertype.html" target="ContentFrame">IdentifierType</a></li>
+                           <li id="incotermscodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="incotermscodetype.html" target="ContentFrame">IncotermsCodeType</a></li>
+                           <li id="individualassetidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="individualassetidentificationtype.html" target="ContentFrame">IndividualAssetIdentificationType</a></li>
+                           <li id="languagecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="languagecodetype.html" target="ContentFrame">LanguageCodeType</a></li>
+                           <li id="logisticunitidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="logisticunitidentificationtype.html" target="ContentFrame">LogisticUnitIdentificationType</a></li>
+                           <li id="measurementrangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="measurementrangetype.html" target="ContentFrame">MeasurementRangeType</a></li>
+                           <li id="measurementtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="measurementtype.html" target="ContentFrame">MeasurementType</a></li>
+                           <li id="measurementunitcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="measurementunitcodetype.html" target="ContentFrame">MeasurementUnitCodeType</a></li>
+                           <li id="multidescription70type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="multidescription70type.html" target="ContentFrame">MultiDescription70Type</a></li>
+                           <li id="nutrienttypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="nutrienttypecodetype.html" target="ContentFrame">NutrientTypeCodeType</a></li>
+                           <li id="partyidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="partyidentificationtype.html" target="ContentFrame">PartyIdentificationType</a></li>
+                           <li id="partyrolecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="partyrolecodetype.html" target="ContentFrame">PartyRoleCodeType</a></li>
+                           <li id="paymentmethodcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="paymentmethodcodetype.html" target="ContentFrame">PaymentMethodCodeType</a></li>
+                           <li id="paymenttermstypecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="paymenttermstypecodetype.html" target="ContentFrame">PaymentTermsTypeCodeType</a></li>
+                           <li id="paymenttimeperiodtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="paymenttimeperiodtype.html" target="ContentFrame">PaymentTimePeriodType</a></li>
+                           <li id="quantityrangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="quantityrangetype.html" target="ContentFrame">QuantityRangeType</a></li>
+                           <li id="quantitytype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="quantitytype.html" target="ContentFrame">QuantityType</a></li>
+                           <li id="rangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="rangetype.html" target="ContentFrame">RangeType</a></li>
+                           <li id="responsibleagencycodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="responsibleagencycodetype.html" target="ContentFrame">ResponsibleAgencyCodeType</a></li>
+                           <li id="returnableassetidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="returnableassetidentificationtype.html" target="ContentFrame">ReturnableAssetIdentificationType</a></li>
+                           <li id="servicerelationidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="servicerelationidentificationtype.html" target="ContentFrame">ServiceRelationIdentificationType</a></li>
+                           <li id="shipmentidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="shipmentidentificationtype.html" target="ContentFrame">ShipmentIdentificationType</a></li>
+                           <li id="sizecodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="sizecodetype.html" target="ContentFrame">SizeCodeType</a></li>
+                           <li id="sizetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="sizetype.html" target="ContentFrame">SizeType</a></li>
+                           <li id="stringrangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="stringrangetype.html" target="ContentFrame">StringRangeType</a></li>
+                           <li id="tsd_accreditationcodetype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_accreditationcodetype.html" target="ContentFrame">TSD_AccreditationCodeType</a></li>
+                           <li id="tsd_accreditationinformationtype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_accreditationinformationtype.html" target="ContentFrame">TSD_AccreditationInformationType</a></li>
+                           <li id="tsd_allergenrelatedinformationtype"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="tsd_allergenrelatedinformationtype.html" target="ContentFrame">TSD_AllergenRelatedInformationType</a></li>
+                           <li id="tsd_allergentype"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="tsd_allergentype.html" target="ContentFrame">TSD_AllergenType</a></li>
+                           <li id="tsd_allergentypecodetype"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="tsd_allergentypecodetype.html" target="ContentFrame">TSD_AllergenTypeCodeType</a></li>
+                           <li id="tsd_attributevaluepairlisttype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_attributevaluepairlisttype.html" target="ContentFrame">TSD_AttributeValuePairListType</a></li>
+                           <li id="tsd_basicproductinformationmoduletype"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="tsd_basicproductinformationmoduletype.html" target="ContentFrame">TSD_BasicProductInformationModuleType</a></li>
+                           <li id="tsd_brandnameinformationtype"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="tsd_brandnameinformationtype.html" target="ContentFrame">TSD_BrandNameInformationType</a></li>
+                           <li id="tsd_countrytype"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="tsd_countrytype.html" target="ContentFrame">TSD_CountryType</a></li>
+                           <li id="tsd_dietaryclaimcodetype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_dietaryclaimcodetype.html" target="ContentFrame">TSD_DietaryClaimCodeType</a></li>
+                           <li id="tsd_exceptiontype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_exceptiontype.html" target="ContentFrame">TSD_ExceptionType</a></li>
+                           <li id="tsd_foodandbeverageingredientinformationmoduletype"><a href="urn_gs1_tsd_food_and_beverage_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_ingredient_information_module</a>:
+                              <a href="tsd_foodandbeverageingredientinformationmoduletype.html" target="ContentFrame">TSD_FoodAndBeverageIngredientInformationModuleType</a></li>
+                           <li id="tsd_foodandbeverageingredienttype"><a href="urn_gs1_tsd_food_and_beverage_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_ingredient_information_module</a>:
+                              <a href="tsd_foodandbeverageingredienttype.html" target="ContentFrame">TSD_FoodAndBeverageIngredientType</a></li>
+                           <li id="tsd_foodandbeveragepreparationinformationmoduletype"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_preparation_information_module</a>:
+                              <a href="tsd_foodandbeveragepreparationinformationmoduletype.html" target="ContentFrame">TSD_FoodAndBeveragePreparationInformationModuleType</a></li>
+                           <li id="tsd_formatteddescription1000type"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_formatteddescription1000type.html" target="ContentFrame">TSD_FormattedDescription1000Type</a></li>
+                           <li id="tsd_formatteddescription2500type"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_formatteddescription2500type.html" target="ContentFrame">TSD_FormattedDescription2500Type</a></li>
+                           <li id="tsd_formatteddescription5000type"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_formatteddescription5000type.html" target="ContentFrame">TSD_FormattedDescription5000Type</a></li>
+                           <li id="tsd_imagelinktype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_imagelinktype.html" target="ContentFrame">TSD_ImageLinkType</a></li>
+                           <li id="tsd_imagetypecodetype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_imagetypecodetype.html" target="ContentFrame">TSD_ImageTypeCodeType</a></li>
+                           <li id="tsd_implementationexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_implementationexceptiontype.html" target="ContentFrame">TSD_ImplementationExceptionType</a></li>
+                           <li id="tsd_invalidgtinexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_invalidgtinexceptiontype.html" target="ContentFrame">TSD_InvalidGTINExceptionType</a></li>
+                           <li id="tsd_invalidrequestexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_invalidrequestexceptiontype.html" target="ContentFrame">TSD_InvalidRequestExceptionType</a></li>
+                           <li id="tsd_invalidtargetmarketexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_invalidtargetmarketexceptiontype.html" target="ContentFrame">TSD_InvalidTargetMarketExceptionType</a></li>
+                           <li id="tsd_levelofcontainmentcodetype"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="tsd_levelofcontainmentcodetype.html" target="ContentFrame">TSD_LevelOfContainmentCodeType</a></li>
+                           <li id="tsd_measurementprecisioncodetype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_measurementprecisioncodetype.html" target="ContentFrame">TSD_MeasurementPrecisionCodeType</a></li>
+                           <li id="tsd_nodataexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_nodataexceptiontype.html" target="ContentFrame">TSD_NoDataExceptionType</a></li>
+                           <li id="tsd_nutrientdetailtype"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="tsd_nutrientdetailtype.html" target="ContentFrame">TSD_NutrientDetailType</a></li>
+                           <li id="tsd_nutrientheadertype"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="tsd_nutrientheadertype.html" target="ContentFrame">TSD_NutrientHeaderType</a></li>
+                           <li id="tsd_nutrienttypecodetype"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="tsd_nutrienttypecodetype.html" target="ContentFrame">TSD_NutrientTypeCodeType</a></li>
+                           <li id="tsd_nutritionalclaimcodetype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_nutritionalclaimcodetype.html" target="ContentFrame">TSD_NutritionalClaimCodeType</a></li>
+                           <li id="tsd_nutritionalproductinformationmoduletype"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="tsd_nutritionalproductinformationmoduletype.html" target="ContentFrame">TSD_NutritionalProductInformationModuleType</a></li>
+                           <li id="tsd_packagingsignaturelinetype"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="tsd_packagingsignaturelinetype.html" target="ContentFrame">TSD_PackagingSignatureLineType</a></li>
+                           <li id="tsd_partycontactrolecodetype"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="tsd_partycontactrolecodetype.html" target="ContentFrame">TSD_PartyContactRoleCodeType</a></li>
+                           <li id="tsd_preparationmethodtype"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_preparation_information_module</a>:
+                              <a href="tsd_preparationmethodtype.html" target="ContentFrame">TSD_PreparationMethodType</a></li>
+                           <li id="tsd_preparationstatecodetype"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="tsd_preparationstatecodetype.html" target="ContentFrame">TSD_PreparationStateCodeType</a></li>
+                           <li id="tsd_preparationtypecodetype"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_preparation_information_module</a>:
+                              <a href="tsd_preparationtypecodetype.html" target="ContentFrame">TSD_PreparationTypeCodeType</a></li>
+                           <li id="tsd_productactivitydetailstype"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="tsd_productactivitydetailstype.html" target="ContentFrame">TSD_ProductActivityDetailsType</a></li>
+                           <li id="tsd_productactivitytypecodetype"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="tsd_productactivitytypecodetype.html" target="ContentFrame">TSD_ProductActivityTypeCodeType</a></li>
+                           <li id="tsd_productallergeninformationmoduletype"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="tsd_productallergeninformationmoduletype.html" target="ContentFrame">TSD_ProductAllergenInformationModuleType</a></li>
+                           <li id="tsd_productclaimsandendorsementsmoduletype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_productclaimsandendorsementsmoduletype.html" target="ContentFrame">TSD_ProductClaimsAndEndorsementsModuleType</a></li>
+                           <li id="tsd_productcomponentrecordtype"><a href="urn_gs1_tsd_product_data_xsd_1.html" target="ContentFrame">product_data</a>:
+                              <a href="tsd_productcomponentrecordtype.html" target="ContentFrame">TSD_ProductComponentRecordType</a></li>
+                           <li id="tsd_productdatarecordtype"><a href="urn_gs1_tsd_product_data_xsd_1.html" target="ContentFrame">product_data</a>:
+                              <a href="tsd_productdatarecordtype.html" target="ContentFrame">TSD_ProductDataRecordType</a></li>
+                           <li id="tsd_productdatatype"><a href="urn_gs1_tsd_product_data_xsd_1.html" target="ContentFrame">product_data</a>:
+                              <a href="tsd_productdatatype.html" target="ContentFrame">TSD_ProductDataType</a></li>
+                           <li id="tsd_productinformationlinktype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_productinformationlinktype.html" target="ContentFrame">TSD_ProductInformationLinkType</a></li>
+                           <li id="tsd_productinformationtypecodetype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_productinformationtypecodetype.html" target="ContentFrame">TSD_ProductInformationTypeCodeType</a></li>
+                           <li id="tsd_productinstructionsmoduletype"><a href="urn_gs1_tsd_product_instructions_module_xsd_1.html" target="ContentFrame">product_instructions_module</a>:
+                              <a href="tsd_productinstructionsmoduletype.html" target="ContentFrame">TSD_ProductInstructionsModuleType</a></li>
+                           <li id="tsd_productorigininformationmoduletype"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="tsd_productorigininformationmoduletype.html" target="ContentFrame">TSD_ProductOriginInformationModuleType</a></li>
+                           <li id="tsd_productquantityinformationmoduletype"><a href="urn_gs1_tsd_product_quantity_information_module_xsd_1.html" target="ContentFrame">product_quantity_information_module</a>:
+                              <a href="tsd_productquantityinformationmoduletype.html" target="ContentFrame">TSD_ProductQuantityInformationModuleType</a></li>
+                           <li id="tsd_querybygtinresponsetype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_querybygtinresponsetype.html" target="ContentFrame">TSD_QueryByGTINResponseType</a></li>
+                           <li id="tsd_regulatorycompliancecodetype"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="tsd_regulatorycompliancecodetype.html" target="ContentFrame">TSD_RegulatoryComplianceCodeType</a></li>
+                           <li id="tsd_securityexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_securityexceptiontype.html" target="ContentFrame">TSD_SecurityExceptionType</a></li>
+                           <li id="tsd_servingquantityinformationtype"><a href="urn_gs1_tsd_product_quantity_information_module_xsd_1.html" target="ContentFrame">product_quantity_information_module</a>:
+                              <a href="tsd_servingquantityinformationtype.html" target="ContentFrame">TSD_ServingQuantityInformationType</a></li>
+                           <li id="tsd_stringattributevaluepairtype"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">tsd_common</a>:
+                              <a href="tsd_stringattributevaluepairtype.html" target="ContentFrame">TSD_StringAttributeValuePairType</a></li>
+                           <li id="tsd_unsupportedversionexceptiontype"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="tsd_unsupportedversionexceptiontype.html" target="ContentFrame">TSD_UnsupportedVersionExceptionType</a></li>
+                           <li id="targetmarkettype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="targetmarkettype.html" target="ContentFrame">TargetMarketType</a></li>
+                           <li id="taxcategorycodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="taxcategorycodetype.html" target="ContentFrame">TaxCategoryCodeType</a></li>
+                           <li id="temperaturemeasurementtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="temperaturemeasurementtype.html" target="ContentFrame">TemperatureMeasurementType</a></li>
+                           <li id="temperaturemeasurementunitcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="temperaturemeasurementunitcodetype.html" target="ContentFrame">TemperatureMeasurementUnitCodeType</a></li>
+                           <li id="temperaturerangetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="temperaturerangetype.html" target="ContentFrame">TemperatureRangeType</a></li>
+                           <li id="timemeasurementtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="timemeasurementtype.html" target="ContentFrame">TimeMeasurementType</a></li>
+                           <li id="timemeasurementunitcodetype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="timemeasurementunitcodetype.html" target="ContentFrame">TimeMeasurementUnitCodeType</a></li>
+                           <li id="tradeitemclassificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="tradeitemclassificationtype.html" target="ContentFrame">TradeItemClassificationType</a></li>
+                           <li id="tradeitemidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="tradeitemidentificationtype.html" target="ContentFrame">TradeItemIdentificationType</a></li>
+                           <li id="typedentityidentificationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="typedentityidentificationtype.html" target="ContentFrame">TypedEntityIdentificationType</a></li>
+                        </ul>
+                     </li>
+                     <li id="Element" class="parent"><a href="javascript:toggleNode('Element')"><img height="11" width="11" src="images/plus.gif"></img>Element</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="basicproductinformationmodule"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">basic_product_information_module</a>:
+                              <a href="basicproductinformationmodule.html" target="ContentFrame">basicProductInformationModule</a></li>
+                           <li id="foodandbeverageingredientinformationmodule"><a href="urn_gs1_tsd_food_and_beverage_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_ingredient_information_module</a>:
+                              <a href="foodandbeverageingredientinformationmodule.html" target="ContentFrame">foodAndBeverageIngredientInformationModule</a></li>
+                           <li id="foodandbeveragepreparationinformationmodule"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">food_and_beverage_preparation_information_module</a>:
+                              <a href="foodandbeveragepreparationinformationmodule.html" target="ContentFrame">foodAndBeveragePreparationInformationModule</a></li>
+                           <li id="nutritionalproductinformationmodule"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">nutritional_product_information_module</a>:
+                              <a href="nutritionalproductinformationmodule.html" target="ContentFrame">nutritionalProductInformationModule</a></li>
+                           <li id="productallergeninformationmodule"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">product_allergen_information_module</a>:
+                              <a href="productallergeninformationmodule.html" target="ContentFrame">productAllergenInformationModule</a></li>
+                           <li id="productclaimsandendorsementsmodule"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">product_claims_and_endorsements_module</a>:
+                              <a href="productclaimsandendorsementsmodule.html" target="ContentFrame">productClaimsAndEndorsementsModule</a></li>
+                           <li id="productinstructionsmodule"><a href="urn_gs1_tsd_product_instructions_module_xsd_1.html" target="ContentFrame">product_instructions_module</a>:
+                              <a href="productinstructionsmodule.html" target="ContentFrame">productInstructionsModule</a></li>
+                           <li id="productorigininformationmodule"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">product_origin_information_module</a>:
+                              <a href="productorigininformationmodule.html" target="ContentFrame">productOriginInformationModule</a></li>
+                           <li id="productquantityinformationmodule"><a href="urn_gs1_tsd_product_quantity_information_module_xsd_1.html" target="ContentFrame">product_quantity_information_module</a>:
+                              <a href="productquantityinformationmodule.html" target="ContentFrame">productQuantityInformationModule</a></li>
+                           <li id="querybygtinresponse"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">query_by_gtin_response</a>:
+                              <a href="querybygtinresponse.html" target="ContentFrame">queryByGtinResponse</a></li>
+                        </ul>
+                     </li>
+                     <li id="SimpleType" class="parent"><a href="javascript:toggleNode('SimpleType')"><img height="11" width="11" src="images/plus.gif"></img>SimpleType</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="allowanceorchargeenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="allowanceorchargeenumerationtype.html" target="ContentFrame">AllowanceOrChargeEnumerationType</a></li>
+                           <li id="dayoftheweekenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="dayoftheweekenumerationtype.html" target="ContentFrame">DayOfTheWeekEnumerationType</a></li>
+                           <li id="documentactionenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="documentactionenumerationtype.html" target="ContentFrame">DocumentActionEnumerationType</a></li>
+                           <li id="documentstatusenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="documentstatusenumerationtype.html" target="ContentFrame">DocumentStatusEnumerationType</a></li>
+                           <li id="enumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="enumerationtype.html" target="ContentFrame">EnumerationType</a></li>
+                           <li id="giaitype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="giaitype.html" target="ContentFrame">GIAIType</a></li>
+                           <li id="ginctype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="ginctype.html" target="ContentFrame">GINCType</a></li>
+                           <li id="glntype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="glntype.html" target="ContentFrame">GLNType</a></li>
+                           <li id="graitype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="graitype.html" target="ContentFrame">GRAIType</a></li>
+                           <li id="gsintype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="gsintype.html" target="ContentFrame">GSINType</a></li>
+                           <li id="gsrntype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="gsrntype.html" target="ContentFrame">GSRNType</a></li>
+                           <li id="gtintype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="gtintype.html" target="ContentFrame">GTINType</a></li>
+                           <li id="genderenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="genderenumerationtype.html" target="ContentFrame">GenderEnumerationType</a></li>
+                           <li id="nonbinarylogicenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="nonbinarylogicenumerationtype.html" target="ContentFrame">NonBinaryLogicEnumerationType</a></li>
+                           <li id="responsestatusenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="responsestatusenumerationtype.html" target="ContentFrame">ResponseStatusEnumerationType</a></li>
+                           <li id="sscctype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="sscctype.html" target="ContentFrame">SSCCType</a></li>
+                           <li id="string1000type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string1000type.html" target="ContentFrame">String1000Type</a></li>
+                           <li id="string200type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string200type.html" target="ContentFrame">String200Type</a></li>
+                           <li id="string2500type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string2500type.html" target="ContentFrame">String2500Type</a></li>
+                           <li id="string35type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string35type.html" target="ContentFrame">String35Type</a></li>
+                           <li id="string5000type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string5000type.html" target="ContentFrame">String5000Type</a></li>
+                           <li id="string500type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string500type.html" target="ContentFrame">String500Type</a></li>
+                           <li id="string70type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string70type.html" target="ContentFrame">String70Type</a></li>
+                           <li id="string80type"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="string80type.html" target="ContentFrame">String80Type</a></li>
+                           <li id="weekenddayenumerationtype"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">shared_common</a>:
+                              <a href="weekenddayenumerationtype.html" target="ContentFrame">WeekendDayEnumerationType</a></li>
+                        </ul>
+                     </li>
+                     <li id="Namespace" class="parent"><a href="javascript:toggleNode('Namespace')"><img height="11" width="11" src="images/plus.gif"></img>Namespace</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="urn_gs1_shared_shared_common_xsd_3"><a href="urn_gs1_shared_shared_common_xsd_3.html" target="ContentFrame">urn:gs1:shared:shared_common:xsd:3</a></li>
+                           <li id="urn_gs1_tsd_basic_product_information_module_xsd_1"><a href="urn_gs1_tsd_basic_product_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:basic_product_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_food_and_beverage_information_module_xsd_1"><a href="urn_gs1_tsd_food_and_beverage_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:food_and_beverage_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1"><a href="urn_gs1_tsd_food_and_beverage_preparation_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:food_and_beverage_preparation_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_nutritional_product_information_module_xsd_1"><a href="urn_gs1_tsd_nutritional_product_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:nutritional_product_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_allergen_information_module_xsd_1"><a href="urn_gs1_tsd_product_allergen_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_allergen_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1"><a href="urn_gs1_tsd_product_claims_and_endorsements_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_claims_and_endorsements_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_data_xsd_1"><a href="urn_gs1_tsd_product_data_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_data:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_instructions_module_xsd_1"><a href="urn_gs1_tsd_product_instructions_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_instructions_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_origin_information_module_xsd_1"><a href="urn_gs1_tsd_product_origin_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_origin_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_product_quantity_information_module_xsd_1"><a href="urn_gs1_tsd_product_quantity_information_module_xsd_1.html" target="ContentFrame">urn:gs1:tsd:product_quantity_information_module:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_query_by_gtin_response_xsd_1"><a href="urn_gs1_tsd_query_by_gtin_response_xsd_1.html" target="ContentFrame">urn:gs1:tsd:query_by_gtin_response:xsd:1</a></li>
+                           <li id="urn_gs1_tsd_tsd_common_xsd_1"><a href="urn_gs1_tsd_tsd_common_xsd_1.html" target="ContentFrame">urn:gs1:tsd:tsd_common:xsd:1</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div id="tab2" class="tab_content"><input type="text" id="txtSearch"></input><input type="button" id="cmdSearch" value="Search" onclick="getSearchJS('txtSearch','ulSearch');"></input><div style="margin-top:10px;">
+                  <ul id="ulSearch" class="search"></ul>
+               </div>
+            </div>
+         </div>
+      </form>
+   </body>
+</html>
